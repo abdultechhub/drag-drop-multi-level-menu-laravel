@@ -1,0 +1,163 @@
+.post_list_ul {
+    margin: 0px;
+    padding: 5px;
+}
+
+.post_list_ul li {
+    list-style: none;
+    padding: 0;
+    background: #fff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+
+    cursor: n-resize;
+    position: relative;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+.post_list_ul li.ui-state-highlight {
+    padding: 20px;
+    background-color: #e7fae3;
+    cursor: move;
+    margin-top: 12px;
+    border: 2px dashed #84f16e;
+}
+
+.post_list_ul .btn_move {
+    display: inline-block;
+    cursor: move;
+    background: #ededed;
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.post_list_ul button.accordion-button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 50% !important;
+    padding: 0px;
+    text-align: center;
+    margin: 0px;
+    background-color: #dcdaff !important;
+    color: #ffff;
+}
+
+.post_list_ul button.accordion-button:after {
+    margin-left: 6px;
+}
+
+
+.post_list_ul .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    padding: 4px 10px 4px 10px;
+}
+
+.post_list_ul .accordion-header select {
+    width: 180px;
+    max-width: 100%;
+    margin-left: 20px;
+}
+
+.post_list_ul .header_left {
+    display: block;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.delete_button {
+    color: #c73333;
+    background-color: #efd5d8;
+    border-color: #fde2e5;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    float: left;
+
+}
+
+.delete_button:hover {
+    color: #fff;
+    background-color: #bb2d3b;
+    border-color: #b02a37;
+}
+
+.edit_button {
+    color: #3c46db;
+    background-color: #f1f3ff;
+    border-color: #e2edfd;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    float: left;
+}
+
+.edit_button:hover {
+    color: #fff;
+    background-color: #3c46db;
+    border-color: #3c46db;
+}
+
+
+#add_page_form .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    padding: 4px 10px 4px 10px;
+    background: #ededed;
+}
+
+#add_page_form button.accordion-button:after {
+    margin-left: 6px;
+}
+
+#add_page_form .accordion-body {
+    max-height: 350px;
+    overflow: auto;
+}
+
+#add_page_form button.accordion-button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 50% !important;
+    padding: 0px;
+    text-align: center;
+    margin: 0px;
+    background-color: #dcdaff !important;
+    color: #ffff;
+}
+
+ul.page_list {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.page_list li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.admin_menu_header {
+    background-color: #ededed;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
