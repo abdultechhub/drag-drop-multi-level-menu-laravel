@@ -25,17 +25,17 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Projects Installation Process
 
-git clone https://github.com/abdultechhub/drag-drop-multi-level-menu-laravel.git
-composer install
-cp .env.example .env   or copy .env.example .env
-Setup database in .env file
-php artisan key:generate
-php artisan migrate --seed
+- git clone https://github.com/abdultechhub/drag-drop-multi-level-menu-laravel.git
+- composer install
+- cp .env.example .env   or copy .env.example .env
+- Setup database in .env file
+- php artisan key:generate
+- php artisan migrate --seed
 
-Open Url
-http://127.0.0.1:8000/menu
-or
-http://localhost:8000/menu
+## Open Url
+- http://127.0.0.1:8000/menu
+- or
+- http://localhost:8000/menu
 
 ## Laravel Sponsors
 
