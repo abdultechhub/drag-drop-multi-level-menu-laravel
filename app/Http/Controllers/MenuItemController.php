@@ -125,7 +125,7 @@ class MenuItemController extends Controller
         $new_data = $data[0];
         // $this->saveMenu($new_data, 0);
     }
-    public function change_parent_menu(Request $request){
+    public function change_parent_menu_item(Request $request){
         //dd($request->all());
 
         $parent_id = MenuItem::findOrFail($request->id);

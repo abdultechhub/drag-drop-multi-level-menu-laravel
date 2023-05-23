@@ -7,7 +7,7 @@
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="{{ route('menu.create_menu') }}" method="post">
+            <form action="{{ route('menu.create_menu_item') }}" method="post">
                 @csrf
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Create New Name</h1>

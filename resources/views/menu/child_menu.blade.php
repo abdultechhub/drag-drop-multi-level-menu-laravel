@@ -18,7 +18,7 @@
                         @endforeach
                     </select>
                 </div>
-                <form action="{{ route('menu.delete_menu', $child->id) }}" method="POST"
+                <form action="{{ route('menu.delete_menu_item', $child->id) }}" method="POST"
                     onsubmit="return confirm('Are you sure you want to delete this post?')">
                     @csrf
                     @method('DELETE')

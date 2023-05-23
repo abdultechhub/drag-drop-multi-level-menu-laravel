@@ -168,7 +168,7 @@
                                                             </div>
 
                                                             <form
-                                                                action="{{ route('menu.delete_menu', $p_menu_item->id) }}"
+                                                                action="{{ route('menu.delete_menu_item', $p_menu_item->id) }}"
                                                                 method="POST"
                                                                 onsubmit="return confirm('Are you sure you want to delete this post?')">
                                                                 @csrf
@@ -266,7 +266,7 @@
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: '/menu/change_parent_menu',
+                url: '/admin/menu/change_parent_menu_item_item',
                 data: {
                     'id': id,
                     'parent_id': parent_id,
@@ -295,7 +295,7 @@
                     console.log(post_order_ids);
                     $.ajax({
                         type: "POST",
-                        url: "{{ route('post.order_change') }}",
+                        url: "{{ route('menu_item.order_change') }}",
                         dataType: "json",
                         data: {
                             order: post_order_ids,
