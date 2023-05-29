@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('slug')->nullable();
             $table->string('type')->nullable();
             $table->string('target')->nullable();
+            $table->string('is_mega_menu')->default(0);
             $table->bigInteger('menu_id')->default('0')->nullable();
             $table->timestamps();
         });
