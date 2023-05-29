@@ -188,32 +188,44 @@
                                                             aria-labelledby="headingThree"
                                                             data-bs-parent="#accordionExample">
                                                             <div class="accordion-body">
-                                                                <form action="{{ route('menu.add_custom_link') }}"
+                                                                <form
+                                                                    action="{{ route('menu.update_menu', $p_menu_item->id) }}"
                                                                     method="post">
                                                                     @csrf
+                                                                    @method('PUT')
                                                                     <input type="hidden" name="menu_id" value="1">
                                                                     <div class="mb-3">
                                                                         <label for="menu_label"
                                                                             class="form-label">Label</label>
                                                                         <input type="text" class="form-control"
                                                                             name="menu_label"
-                                                                            value="{{ $menu_item->name ?? '' }}">
+                                                                            value="{{ $p_menu_item->name ?? '' }}">
                                                                     </div>
                                                                     <div class="mb-3">
                                                                         <label for="menu_link"
                                                                             class="form-label">Link</label>
                                                                         <input type="text" class="form-control"
                                                                             name="menu_link"
-                                                                            value="{{ $menu_item->slug ?? '' }}">
+                                                                            value="{{ $p_menu_item->slug ?? '' }}">
                                                                     </div>
                                                                     <div class="mb-3 form-check">
                                                                         <input type="checkbox" class="form-check-input"
                                                                             name="menu_target"
-                                                                            value="{{ $menu_item->target ?? '' }}"
-                                                                            {{ $menu_item->target == '_balnk' ? 'checked' : '' }}>
+                                                                            value="{{ $p_menu_item->target ?? '' }}"
+                                                                            {{ $p_menu_item->target == '_balnk' ? 'checked' : '' }}>
                                                                         <label class="form-check-label"
                                                                             for="menu_target">Open
                                                                             New Tab</label>
+                                                                    </div>
+                                                                    <div class="form-check mb-3">
+                                                                        <input type="checkbox" class="form-check-input"
+                                                                            name="is_mega_menu"
+                                                                            id="is_mega_menu_{{ $p_menu_item->id }}"
+                                                                            value="1"
+                                                                            {{ $p_menu_item->is_mega_menu == '1' ? 'checked' : '' }}>
+                                                                        <label class="form-check-label"
+                                                                            for="is_mega_menu_{{ $p_menu_item->id }}">Enable
+                                                                            Mega Menu</label>
                                                                     </div>
                                                                     <button type="submit" class="btn btn-primary">Update
                                                                         menu</button>

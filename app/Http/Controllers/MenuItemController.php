@@ -18,8 +18,26 @@ class MenuItemController extends Controller
         $menu_single = Menu::find($id);
         $page = Page::get();
         $blog_category = BLogCategory::get();
-
+        
+       // dd($parent_menu_item);
         return view ('menu.menu', compact('parent_menu_item', 'all_menu_item', 'all_menu', 'id', 'menu_single', 'page', 'blog_category'));
+    }
+
+    public function update_menu(Request $request, $id){
+        $count = MenuItem::count();
+        $menu_item = MenuItem::find($id);
+        $menu_item->update([
+            'name' => $request->input('menu_label'),
+            'slug' => $request->input('menu_link'),
+            'target' => $request->input('menu_target'),
+            'is_mega_menu' => $request->input('is_mega_menu'),
+        ]);
+
+        $notification = [
+            'message' => 'Menu Updated  Successfully!!',
+            'alert-type' => 'success'
+        ];
+        return redirect()->back()->with($notification);
     }
 
     public function add_custom_link(Request $request){

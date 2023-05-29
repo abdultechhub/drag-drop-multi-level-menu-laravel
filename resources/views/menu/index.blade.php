@@ -22,6 +22,7 @@
                                                 <tr class="bg-light">
                                                     <th>#</th>
                                                     <th>Name</th>
+                                                    <th>Location* <small>(should not be repeat)</small></th>
                                                     <th>Mange Menu Items</th>
                                                     <th>Action</th>
                                                 </tr>
@@ -29,8 +30,9 @@
                                             <tbody>
                                                 @foreach ($menu as $item)
                                                     <tr>
-                                                        <td>{{ $loop->index }}</td>
+                                                        <td>{{ $loop->index + 1 }}</td>
                                                         <td>{{ $item->title }}</td>
+                                                        <td>{{ $item->location }}</td>
                                                         <td>
                                                             <a href="{{ route('menu.menu', $item) }}"
                                                                 class="btn btn-primary btn-sm" title="Edit Data">Manage
@@ -70,4 +72,41 @@
 @endsection
 
 @section('custom_js')
+    <script>
+        $("#search_filter_inpt").on('keyup', function() {
+
+            var value = $(this).val().toLowerCase();
+
+            var num = 0;
+
+            $(".code_s_bloc").each(function() {
+
+                if ($(this).text().toLowerCase().search(value) > -1) {
+
+                    $(this).show();
+
+                    $(this).prev('.subjectName').last().show();
+
+                    // $("#result_count").html(`<span class="count_res">Results Founds:` +
+
+                    //     num +
+
+                    //     `</span>`);
+
+                } else {
+
+                    $(this).hide();
+
+                    //  $("#result_count").html(
+
+                    //     `<span class="count_res">No Result Fount Try another keyword</span>`);
+
+                }
+
+                num++;
+
+            });
+
+        })
+    </script>
 @endsection

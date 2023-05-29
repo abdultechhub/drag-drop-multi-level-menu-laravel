@@ -32,8 +32,9 @@
             <div id="collapse_{{ $child->id }}" class="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <form action="{{ route('menu.add_custom_link') }}" method="post">
+                    <form action="{{ route('menu.update_menu', $menu_item->id) }}" method="post">
                         @csrf
+                        @method('PUT')
                         <input type="hidden" name="menu_id" value="1">
                         <div class="mb-3">
                             <label for="menu_label" class="form-label">Label</label>
